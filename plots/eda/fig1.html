@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "bar", "height": 10}, "encoding": {"color": {"condition": {"value": "#d95f02", "test": "(datum.percent_null > 0.6)"}, "value": "#1b9e77"}, "tooltip": [{"field": "value", "type": "quantitative"}], "x": {"field": "value", "title": "Missing Values", "type": "quantitative"}, "y": {"field": "variable", "title": "Variable", "type": "nominal"}}, "height": {"step": 30}, "selection": {"selector004": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": {"text": ["Missing Values in Reddit Data"], "subtitle": ["Subreddit: NoStupidQuestions"]}}, {"mark": "rule", "encoding": {"x": {"field": "a", "type": "quantitative"}}}], "data": {"name": "data-d4a631cc7704f4ac0b46dee31073edc4"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-d4a631cc7704f4ac0b46dee31073edc4": [{"variable": "associated_award", "value": 35639, "total_value": 8013371, "percent_null": 0.0, "a": 4808022.6}, {"variable": "author_created_utc", "value": 2681970, "total_value": 8013371, "percent_null": 0.33, "a": 4808022.6}, {"variable": "author_flair_background_color", "value": 6943558, "total_value": 8013371, "percent_null": 0.87, "a": 4808022.6}, {"variable": "author_flair_css_class", "value": 7881146, "total_value": 8013371, "percent_null": 0.98, "a": 4808022.6}, {"variable": "author_flair_richtext", "value": 887008, "total_value": 8013371, "percent_null": 0.11, "a": 4808022.6}, {"variable": "author_flair_template_id", "value": 7506275, "total_value": 8013371, "percent_null": 0.94, "a": 4808022.6}, {"variable": "author_flair_text", "value": 7351168, "total_value": 8013371, "percent_null": 0.92, "a": 4808022.6}, {"variable": "author_flair_text_color", "value": 6441108, "total_value": 8013371, "percent_null": 0.8, "a": 4808022.6}, {"variable": "author_flair_type", "value": 887008, "total_value": 8013371, "percent_null": 0.11, "a": 4808022.6}, {"variable": "author_fullname", "value": 887008, "total_value": 8013371, "percent_null": 0.11, "a": 4808022.6}, {"variable": "author_patreon_flair", "value": 887008, "total_value": 8013371, "percent_null": 0.11, "a": 4808022.6}, {"variable": "author_premium", "value": 836863, "total_value": 8013371, "percent_null": 0.1, "a": 4808022.6}, {"variable": "awarders", "value": 281245, "total_value": 8013371, "percent_null": 0.04, "a": 4808022.6}, {"variable": "body", "value": 1, "total_value": 8013371, "percent_null": 0.0, "a": 4808022.6}, {"variable": "collapsed_because_crowd_control", "value": 8013371, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "collapsed_reason", "value": 7977405, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "comment_type", "value": 8013371, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "distinguished", "value": 4193667, "total_value": 8013371, "percent_null": 0.52, "a": 4808022.6}, {"variable": "edited", "value": 7761550, "total_value": 8013371, "percent_null": 0.97, "a": 4808022.6}, {"variable": "removal_reason", "value": 8013370, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "retrieved_on", "value": 1903517, "total_value": 8013371, "percent_null": 0.24, "a": 4808022.6}, {"variable": "subreddit_name_prefixed", "value": 1903517, "total_value": 8013371, "percent_null": 0.24, "a": 4808022.6}, {"variable": "top_awarded_type", "value": 8013371, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "treatment_tags", "value": 2738, "total_value": 8013371, "percent_null": 0.0, "a": 4808022.6}, {"variable": "author_cakeday", "value": 7984542, "total_value": 8013371, "percent_null": 1.0, "a": 4808022.6}, {"variable": "editable", "value": 4319921, "total_value": 8013371, "percent_null": 0.54, "a": 4808022.6}, {"variable": "media_metadata", "value": 7862485, "total_value": 8013371, "percent_null": 0.98, "a": 4808022.6}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

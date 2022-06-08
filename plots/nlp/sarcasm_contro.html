@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "bar", "width": 30}, "encoding": {"color": {"value": "#fc9272"}, "tooltip": [{"field": "avg_score", "type": "quantitative"}], "x": {"field": "sarcasm_value", "scale": {"domain": [0.1, 1]}, "title": "Average Sarcasm Value", "type": "quantitative"}, "y": {"field": "avg_contro", "scale": {"domain": [0, 4500]}, "title": "Total Controversial Comments", "type": "quantitative"}}, "selection": {"selector029": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": {"text": ["Is controversiality dependent on a sarcastic remark?"], "subtitle": ["Plot of avg sarcasm value against total controversial comments"]}, "width": 600}, {"mark": {"type": "rect", "color": "#a6bddb", "opacity": 0.01}, "encoding": {"x": {"field": "Start", "type": "quantitative"}, "x2": {"field": "Middle"}, "y": {"value": 300}, "y2": {"value": 0}}}, {"mark": {"type": "rect", "color": "#edf8b1", "opacity": 0.01}, "encoding": {"x": {"field": "Start2", "type": "quantitative"}, "x2": {"field": "Middle2"}, "y": {"value": 300}, "y2": {"value": 0}}}, {"mark": {"type": "text", "angle": 0, "opacity": 0.1, "size": 14, "text": "Sarcastic Comment"}, "encoding": {"x": {"field": "text", "type": "quantitative"}, "y": {"field": "text_y", "type": "quantitative"}}}, {"mark": {"type": "text", "angle": 0, "opacity": 0.1, "size": 14, "text": "Normal Comment"}, "encoding": {"x": {"field": "text1", "type": "quantitative"}, "y": {"field": "text_y1", "type": "quantitative"}}}], "data": {"name": "data-f6cd4ba674564da115c9f01809662373"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-f6cd4ba674564da115c9f01809662373": [{"sarcasm_value": 1.0, "Activity": 394823, "avg_score": 8.067767075373014, "avg_gild": 81, "avg_contro": 3521, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.3, "Activity": 69422, "avg_score": 7.760076056581487, "avg_gild": 35, "avg_contro": 768, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.4, "Activity": 57327, "avg_score": 5.707729342194777, "avg_gild": 9, "avg_contro": 654, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.8, "Activity": 68537, "avg_score": 8.487182106015728, "avg_gild": 29, "avg_contro": 765, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.2, "Activity": 99797, "avg_score": 6.853522650981493, "avg_gild": 33, "avg_contro": 1153, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.7, "Activity": 56106, "avg_score": 7.491765586568281, "avg_gild": 16, "avg_contro": 620, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.1, "Activity": 215704, "avg_score": 7.004496903163594, "avg_gild": 61, "avg_contro": 2486, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.6, "Activity": 51268, "avg_score": 7.231782008270266, "avg_gild": 12, "avg_contro": 557, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.5, "Activity": 52183, "avg_score": 7.084701914416573, "avg_gild": 25, "avg_contro": 612, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}, {"sarcasm_value": 0.9, "Activity": 119144, "avg_score": 7.381152219163365, "avg_gild": 31, "avg_contro": 1287, "text": 0.8, "text_y": 3500, "text1": 0.2, "text_y1": 3500, "a": 3650, "Start": 0.5, "Middle": 1.1, "Start2": 0, "Middle2": 0.5}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "data": {"name": "data-e85ded97c02edd366d174dd9a06daf2f"}, "mark": {"type": "bar", "color": "#fc9272"}, "encoding": {"x": {"field": "score", "title": "Importance Score", "type": "quantitative"}, "y": {"field": "name", "sort": ["controversiality", "is_covid", "hour_cos", "topic", "sentiment_class_vec_positive", "hour_sin", "year_post", "day_month_cos", "emotion_class_vec_joy", "is_joke"], "title": "Feature Name", "type": "nominal"}}, "height": 300, "title": "Feature Importance in Logistic Regression", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-e85ded97c02edd366d174dd9a06daf2f": [{"idx": 7, "name": "controversiality", "vals": null, "score": 0.50363303828394}, {"idx": 21, "name": "is_covid", "vals": null, "score": 0.3683933266501019}, {"idx": 11, "name": "hour_cos", "vals": null, "score": 0.029244583436378122}, {"idx": 10, "name": "topic", "vals": null, "score": 0.011458840698813132}, {"idx": 1, "name": "sentiment_class_vec_positive", "vals": null, "score": 0.007477863497930833}, {"idx": 12, "name": "hour_sin", "vals": null, "score": 0.0029448513160813573}, {"idx": 19, "name": "year_post", "vals": null, "score": 1.061838510758141e-05}, {"idx": 17, "name": "day_month_cos", "vals": null, "score": 0.0}, {"idx": 4, "name": "emotion_class_vec_joy", "vals": null, "score": 0.0}, {"idx": 20, "name": "is_joke", "vals": null, "score": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

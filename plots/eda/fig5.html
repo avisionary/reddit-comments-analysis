@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "bar", "height": 15}, "encoding": {"color": {"condition": {"value": "#d95f02", "test": "(datum.Awards === 'No Awards')"}, "value": "#1b9e77"}, "tooltip": [{"field": "avg_score", "type": "quantitative"}], "x": {"field": "avg_score", "title": "Avg. Score", "type": "quantitative"}, "y": {"field": "Awards", "title": "Awards", "type": "nominal"}}, "height": {"step": 30}, "selection": {"selector014": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": {"text": ["Average score of Top awards"], "subtitle": ["Subreddit: NoStupidQuestions"]}}, {"mark": {"type": "text", "angle": 0, "text": "Avg score of No Awards is so low that we can barely see it"}, "encoding": {"x": {"field": "text", "type": "quantitative"}, "y": {"field": "text_y", "type": "nominal"}}}], "data": {"name": "data-9de42db74b933a95b319c47b22f06cd7"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-9de42db74b933a95b319c47b22f06cd7": [{"Awards": "No Awards", "Activity": 7998319, "avg_score": 4.953317690879796, "avg_gild": 4.700987795060437e-05, "avg_contro": 0.009482117429924964, "text": 600, "text_y": "No Awards"}, {"Awards": "Silver", "Activity": 3700, "avg_score": 759.1064864864865, "avg_gild": 0.05891891891891892, "avg_contro": 0.024324324324324326, "text": 600, "text_y": "No Awards"}, {"Awards": "Helpful", "Activity": 2035, "avg_score": 424.3945945945946, "avg_gild": 0.014742014742014743, "avg_contro": 0.015724815724815724, "text": 600, "text_y": "No Awards"}, {"Awards": "Hugz", "Activity": 1897, "avg_score": 1063.5255666842384, "avg_gild": 0.08539799683711123, "avg_contro": 0.016341591987348445, "text": 600, "text_y": "No Awards"}, {"Awards": "Wholesome", "Activity": 1335, "avg_score": 417.5917602996255, "avg_gild": 0.0149812734082397, "avg_contro": 0.023220973782771534, "text": 600, "text_y": "No Awards"}, {"Awards": "Gold", "Activity": 1219, "avg_score": 349.4380639868745, "avg_gild": 0.9540607054963085, "avg_contro": 0.054142739950779326, "text": 600, "text_y": "No Awards"}, {"Awards": "Take My Energy", "Activity": 737, "avg_score": 1227.7476255088195, "avg_gild": 0.13161465400271372, "avg_contro": 0.0407055630936228, "text": 600, "text_y": "No Awards"}, {"Awards": "All-Seeing Upvote", "Activity": 455, "avg_score": 168.31428571428572, "avg_gild": 0.0, "avg_contro": 0.041758241758241756, "text": 600, "text_y": "No Awards"}, {"Awards": "This", "Activity": 315, "avg_score": 466.9936507936508, "avg_gild": 0.006349206349206349, "avg_contro": 0.047619047619047616, "text": 600, "text_y": "No Awards"}, {"Awards": "Rocket Like", "Activity": 306, "avg_score": 516.6470588235294, "avg_gild": 0.02287581699346405, "avg_contro": 0.013071895424836602, "text": 600, "text_y": "No Awards"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
