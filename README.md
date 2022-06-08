@@ -1,18 +1,8 @@
-# Project Final Portfolio
+# Reddit Comments Analysis
 
-## ANLY 502
+## Author : Avi Arora
 
-## Anderson Monken
-
-### Date Given: April 12, 2022
-
-### Due Date: May 3, 2022 11:59 pm
-
-## **CANNOT BE LATE**
-
-**You should thoroughly read through the entire assignment before beginning your work! Don't start the cluster until you are ready.**
-
-**Data in the cluster's HDFS (Hadoop distributed file system) will be lost when the cluster terminates (CODE AND DATA). If you want to keep data, you must store it in S3.**
+Visit https://aviarora.georgetown.domains/reddit_analysis/Pages/Introduction.html for detailed information.
 
 ## Cluster Setup
 
@@ -28,19 +18,11 @@
 
 6.  Git add, commit, and push your notebook(s)
 
-## Assignment Details (90 points)
+## Project
 
 In this assignment you will complete your portfolio, making sure that it is **ready for primetime**. This means that your portfolio website has been improved since your intermediate assignments and will wow any future employers.
 
 Remember, all your big data analysis must be in PySpark. You may choose to put all your work into one notebook or you may choose to separate out your final work. It might be the case that you have to do very little additional coding for your final portfolio. This really depends on the status of your existing project work and how much more effort you have to put into building it out to be great! More refinement is always better! Iteration always helps! Keep improving the project!
-
-Portfolio requirements:
-
--   Adapting feedback and making improvements. As part of the revise and resubmit discussion, you are required to make improvements to your project based on prior feedback. You will get more feedback after that point in the semester so that you can improve your project further. This is essential!!!
-
--   Spell check, grammar check, read for clarity! Make sure all your pages are well-written and free of errors!
-
--   Submit all your notebooks used in the project to the Git repo! You must also have all your notebooks available on your website!
 
 -   **Introduction page**
 
@@ -70,33 +52,4 @@ Portfolio requirements:
 
     -   The introduction and conclusion should serve as book ends to your project. If I read them without any of the middle pages, I should still be able to understand the purpose of the project, its impact, and your next steps.
 
-## Submitting the Assignment
 
-You will follow the two part submission process for all labs and assignments:
-
-1.  Add all your requested files to the GitHub assignment repo for the appropriate deliverable
-2.  Submit the URL for your repo to Canvas indicating that you have completed your deliverable. **Do not change your GitHub repo after submitting your URL on Canvas**
-
-Make sure you commit **only the files requested**, and push your repository to GitHub!
-
-The files to be committed and pushed to the repository for this assignment are:
-
--   `README.md`
--   `.gitignore`
--   one or more jupyter notebooks
--   `spark_guide.html`
-
-## Grading Rubric
-
-If your the submission meets or exceeds the requirements, is creative, is well thought-out, has proper presentation and grammar, and is at the graduate student level, then the submission will get full credit. Otherwise, partial credit will be given and deductions may be made for any of the following reasons:
-
-Points will be deducted for any of the following reasons:
-
--   The instructions are not followed
--   There are missing sections of the deliverable
--   The overall presentation and/or writing is sloppy
--   There are no comments in your code
--   There are files in the repository other than those requested
--   There are absolute filename links in your code
--   The repository structure is altered in any way
--   Files are named incorrectly (wrong extensions, wrong case, etc.)
